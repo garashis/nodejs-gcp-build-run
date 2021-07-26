@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/mylearningproject-320411/github.com/garashis/nodejs-gcp-build-run:$SHORT_SHA', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', '-t', 'gcr.io/mylearningproject-320411/github.com/garashis/nodejs-gcp-build-run:$SHORT_SHA', '.']  
